@@ -24,7 +24,7 @@ const Login: React.FC = () => {
       await createUser({
         variables: {
           firstName: user.givenName,
-          lastName: user.familyName,
+          lastName: user.familyName ? user.familyName: user.givenName,
           email: user.email,
           googleId: user.googleId,
         },
